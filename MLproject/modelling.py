@@ -12,17 +12,12 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     np.random.seed(40)
  
-    file_path = sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "final_dataset.csv")
+    file_path = sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "Brain_stroke_prediction_dataset_Final.csv")
     data = pd.read_csv(file_path)
-    
-    # 2. Drop non-informative feature
-    if 'Employee_ID' in data.columns:
-        data = data.drop(columns=['Employee_ID'])
-
  
     X_train, X_test, y_train, y_test = train_test_split(
-    data.drop("Mental_Health_Condition", axis=1),
-    data["Mental_Health_Condition"],
+    data.drop("stroke", axis=1),
+    data["stroke"],
     random_state=42,
     test_size=0.2
     )
