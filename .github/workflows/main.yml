@@ -9,8 +9,8 @@ on:
       - main
 
 env:
-  CSV_URL: "final_dataset.csv"
-  TARGET_VAR: "Mental_Health_Condition"
+  CSV_URL: "Brain_stroke_prediction_dataset_Final.csv"
+  TARGET_VAR: "stroke"
 
 jobs:
   build:
