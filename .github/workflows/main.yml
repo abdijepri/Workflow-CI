@@ -58,7 +58,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
       # Save models to GitHub Repository
-      - name: Save mlruns to repo
+      - name: Save mlruns to repository
         run: |
           git add mlruns/
           git commit -m "Save mlruns from CI run"
