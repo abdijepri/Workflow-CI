@@ -41,3 +41,7 @@ if __name__ == "__main__":
         # Log metrics
         accuracy = model.score(X_test, y_test)
         mlflow.log_metric("accuracy", accuracy)
+
+        print(f"Model training selesai.")
+        print(f"Akurasi model: {accuracy:.4f}")
+        print(f"Model disimpan di run_id: {run.info.run_id}")
