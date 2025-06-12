@@ -17,7 +17,7 @@ if __name__ == "__main__":
  
     X_train, X_test, y_train, y_test = train_test_split(
     data.drop("stroke", axis=1),
-    data["stroke"],
+    data["stroke"], 
     random_state=42,
     test_size=0.2
     )
